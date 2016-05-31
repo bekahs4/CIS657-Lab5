@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Distance / Bearing-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Lab03" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gex-1H-Cwd">
+                                <rect key="frame" x="73" y="141" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xwR-TE-Q9N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsA-a6-qRL">
+                                <rect key="frame" x="73" y="186" width="545" height="21"/>
+                                <fontDescription key="fontDescription" name="Asap-Bold" family="Asap" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUV-qY-qma">
+                                <rect key="frame" x="73" y="215" width="554" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bearing: ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-ur-bPW">
+                                <rect key="frame" x="73" y="52" width="332" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="equalCentering" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dF3-xo-3Np">
+                                        <rect key="frame" x="0.0" y="0.0" width="332" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tn6-8J-hce">
+                                                <rect key="frame" x="0.0" y="0.0" width="332" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter latitude for p1" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GH1-RJ-fNz" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Enter longitude for p1" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iDw-WR-ed9" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                        <rect key="frame" x="176" y="0.0" width="156" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" tag="20" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="542-Bu-RDG">
+                                        <rect key="frame" x="0.0" y="50" width="332" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter latitude for p2" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-Hi-1GV" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter longitude for p2" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RlT-yo-ORL" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="0.0" width="162" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATK-Yi-h5l">
+                                <rect key="frame" x="361" y="141" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="80E-z7-hVc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Icb-ur-bPW" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="8IF-I2-TeH"/>
+                            <constraint firstItem="tn6-8J-hce" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="8OU-RZ-nQt"/>
+                            <constraint firstItem="542-Bu-RDG" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="9UJ-55-Qwp"/>
+                            <constraint firstItem="ATK-Yi-h5l" firstAttribute="trailing" secondItem="RlT-yo-ORL" secondAttribute="trailing" id="Ab5-df-bht"/>
+                            <constraint firstItem="Gex-1H-Cwd" firstAttribute="leading" secondItem="Icb-ur-bPW" secondAttribute="leading" id="J4l-Mx-Nxu"/>
+                            <constraint firstItem="wUV-qY-qma" firstAttribute="leading" secondItem="3dv-Hi-1GV" secondAttribute="leading" id="Omj-WD-gIc"/>
+                            <constraint firstItem="dF3-xo-3Np" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="V3V-4t-HcG"/>
+                            <constraint firstItem="jsA-a6-qRL" firstAttribute="leading" secondItem="3dv-Hi-1GV" secondAttribute="leading" id="VmN-0W-N4j"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Distance / Bearing" image="map" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="bearingLabel" destination="wUV-qY-qma" id="WOf-m9-7E1"/>
+                        <outlet property="distanceLabel" destination="jsA-a6-qRL" id="dKB-Wq-DTe"/>
+                        <outlet property="pointOneLat" destination="GH1-RJ-fNz" id="x6h-xQ-2p8"/>
+                        <outlet property="pointOneLong" destination="iDw-WR-ed9" id="gKI-MT-ak3"/>
+                        <outlet property="pointTwoLat" destination="3dv-Hi-1GV" id="115-ne-xu5"/>
+                        <outlet property="pointTwoLong" destination="RlT-yo-ORL" id="qIm-19-CHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="-346"/>
+        </scene>
+        <!--Compute Point-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Lab03" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-Xq-Gxz">
+                                <rect key="frame" x="246" y="150" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hXT-eT-0SJ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" axis="vertical" distribution="equalCentering" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wQ1-7E-m0O">
+                                <rect key="frame" x="38" y="50" width="256" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qQn-5c-4o9">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Start latitude" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Fr-GD-Ymf" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Start longitude" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FiD-tj-fsm" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                <rect key="frame" x="138" y="0.0" width="118" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wAI-Iu-ovm">
+                                        <rect key="frame" x="0.0" y="50" width="256" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Thv-Xr-BSw">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Distance" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-oJ-vC4" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bearing" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-Jl-TWK" customClass="DecimalMinusTextField" customModule="Lab03" customModuleProvider="target">
+                                                        <rect key="frame" x="138" y="0.0" width="118" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37P-Ci-J73">
+                                <rect key="frame" x="38" y="150" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cca-a2-ucQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Endpoint:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNt-6S-eHQ">
+                                <rect key="frame" x="38" y="195" width="554" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="37P-Ci-J73" firstAttribute="leading" secondItem="wQ1-7E-m0O" secondAttribute="leading" id="0ba-YI-ZyQ"/>
+                            <constraint firstItem="TYd-Xq-Gxz" firstAttribute="trailing" secondItem="FiD-tj-fsm" secondAttribute="trailing" id="FLI-jv-5eb"/>
+                            <constraint firstItem="Thv-Xr-BSw" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="LVV-uh-kvr"/>
+                            <constraint firstItem="TNt-6S-eHQ" firstAttribute="leading" secondItem="6Fr-GD-Ymf" secondAttribute="leading" id="hCE-JW-mXh"/>
+                            <constraint firstItem="wQ1-7E-m0O" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="hbh-X6-ptI"/>
+                            <constraint firstItem="qQn-5c-4o9" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="mXe-na-8QG"/>
+                            <constraint firstItem="wQ1-7E-m0O" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="30" id="yhr-YD-Oqx"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7lJ-Io-iXj" appends="YES" id="8J2-28-AD3"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Compute Point" image="angle" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="bearing" destination="3Je-Jl-TWK" id="Bzw-dc-mcT"/>
+                        <outlet property="distanceToTravel" destination="1FD-oJ-vC4" id="BPc-CT-w6r"/>
+                        <outlet property="endpointLabel" destination="TNt-6S-eHQ" id="G32-QX-T9t"/>
+                        <outlet property="startLat" destination="6Fr-GD-Ymf" id="lkE-rs-kZX"/>
+                        <outlet property="startLong" destination="FiD-tj-fsm" id="8j9-zI-sn1"/>
+                        <outlet property="tapGesture" destination="7lJ-Io-iXj" id="bGJ-4h-ecG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7lJ-Io-iXj">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="8rJ-Kc-sve" id="Yc7-Jp-D43"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="angle" width="30" height="29"/>
+        <image name="map" width="30" height="30"/>
+    </resources>
+</document>
